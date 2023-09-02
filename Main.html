@@ -3,67 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Analysis Expertise</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        header {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        ul {
-            list-style-type: circle;
-        }
-    </style>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Business Analysis Expertise</h1>
-    </header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>Hello, I am [Your Name], a skilled business analyst with expertise in various areas of business analysis.</p>
-
-        <h2>My Skills</h2>
+    <nav class="sidebar">
         <ul>
-            <li>Requirements Gathering</li>
-            <li>Process Modeling</li>
-            <li>Data Analysis</li>
-            <li>SWOT Analysis</li>
-            <li>Stakeholder Communication</li>
+            <li><img src="SKlogo2.png" height="100%" width="100%"></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#my-skills">My Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
+    </nav>
+    <header >
+        <h1>Business Analyst | CRM Product Ownerr</h1>
+    </header>
+    <div class="container" id="about-me">
+        <p class="with-bg-color">As an accomplished Business Analyst with a proven track record in delivering actionable insights and driving process improvements, I bring a unique blend of technical expertise and business acumen to every project.</p>
+        <p>My passion for understanding and translating complex business requirements into innovative solutions has consistently contributed to the success of cross-functional teams and optimized system functionalities.</p> 
+        <p class="with-bg-color">With a background deeply rooted in the Software Development Life Cycle and extensive experience collaborating with diverse stakeholders, including business users and IT teams, I have honed my skills in identifying critical pain points and fostering efficient problem-solving.</p>
+        <p>My expertise extends to data analysis, enabling me to derive meaningful insights and develop actionable reports and dashboards that empower business users and management with vital information.</p>
+        <p class="with-bg-color">In my roles, I have excelled at bridging the gap between business goals and technological solutions. I specialize in facilitating workshops and interviews to capture intricate business needs, aligning them with strategic objectives, and orchestrating seamless collaborations between teams to ensure project success.</p>
+        <p>With a keen eye for detail and a commitment to continuous improvement, I have consistently optimized systems, increased operational efficiency, and added substantial value to the businesses I've served.</p>
+        <p class="with-bg-color">My proficiency in financial testing, process enhancement, and software implementation makes me a versatile candidate capable of driving results in dynamic and demanding environments.</p>
+        <p>I am driven by a passion for innovation, a dedication to transparency through meticulous documentation, and an unwavering commitment to delivering solutions that meet the evolving needs of the business. </p>
+        <p class="with-bg-color">I am eager to leverage my skill set and contribute to the success of your team, making an impact as both a Business Analyst and Product Owner.</p>
 
-        <h2>My Expertise</h2>
-        <p>I have extensive experience in helping organizations make informed decisions by analyzing data, identifying opportunities, and creating solutions that drive business growth.</p>
 
-        <h2>Contact Me</h2>
-        <p>If you're interested in discussing how my expertise can benefit your organization, please feel free to contact me at [Your Email Address].</p>
     </div>
+    <div class="container" id="my-skills">
+        <div class="chart-container">
+            <div class="chart" data-percent="80">
+                <div class="chart-content">
+                    <span class="chart-percent">0%</span>
+                    <svg>
+                        <circle class="chart-circle-bg" cx="50%" cy="50%" r="45%"></circle>
+                        <circle class="chart-circle" cx="50%" cy="50%" r="45%"></circle>
+                    </svg>
+                </div>
+            </div>
+            <!-- Add more .chart elements for additional skills -->
+        </div>
+        
+        
+    </div>
+    <div class="container" id="experience">
+        <!-- Experience Section Content -->
+    </div>
+    <div class="container" id="contact-us">
+        <!-- Contact Us Section Content -->
+    </div>
+    <script src="chart.js"></script>
 </body>
 </html>
