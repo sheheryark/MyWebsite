@@ -1,0 +1,203 @@
+/* Define CSS Variables for Colors and Fonts */
+:root {
+    --primary-bg: #333;
+    --seconday-bg: #fff;
+    --primary-text: #6A4B35;
+    --secondary-text: #333;
+    --heading-text: #92655D;
+    --link-text: #9A7456;
+    --body-font: 'Le Havre', sans-serif;
+}
+
+/* Common Font Styles */
+@font-face {
+    font-family: 'Le Havre';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Le Havre'),
+        url('LeHavre.woff') format('woff'),
+        url('LeHavre.ttf') format('truetype'),
+        url('LeHavre.eot?#iefix') format('embedded-opentype');
+}
+
+/* Container Styles */
+.container {
+    max-width: 100%;
+    margin: 0; /* Remove margin to prevent overflow on small screens */
+    margin-top: 5px;
+    margin-left: 200px;
+    padding: 20px;
+    background-color: var(--seconday-bg);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Style for the paragraphs with color */
+.container p.with-color {
+    color: #007bff; /* Change this to the desired text color */
+}
+
+/* Style for the paragraphs with a background color */
+.container p.with-bg-color {
+    background-color: var(--primary-bg); /* Change this to the desired background color */
+    color: #fff; /* Set a contrasting text color */
+}
+.container, header {
+    z-index: 1;
+}
+
+.sidebar {
+    z-index: 0;
+}
+/* Center-align the Header */
+header {
+    text-align: center;
+    background-color: var(--seconday-bg);
+    color: var(--primary-bg);
+    padding: 20px;
+    margin-left: 150px;
+}
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}
+img {
+    outline: none;
+}
+.title{
+    margin-bottom: 5px;
+}
+.sidnav{
+    margin-right: 10px;
+}
+/* Media Queries for Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin-top: 10px;
+    }
+
+    /* Adjust margin for smaller screens */
+    .container,
+    header {
+        margin-left: 0;
+    }
+
+    /* Sidebar Styles for Mobile */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 10px;
+        display: none;
+    }
+
+    /* Display the sidebar when a mobile menu button is clicked */
+    .menu-button {
+        display: block;
+    }
+
+    .sidebar.active {
+        display: block;
+    }
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--seconday-bg);
+    color: var(--primary-bg);
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    font-size: 22px;
+}
+
+/* Sidebar Links Styles */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 50px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--primary-bg);
+    font-weight: bold;
+}
+
+/* Style the active link */
+.sidebar a:hover {
+    background-color: #555;
+    color: var(--seconday-bg);
+    font-size: 25px;
+}
+
+/* Highlight the active link */
+.sidebar a.active {
+    background-color: #007bff;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 20px;
+}
+
+.chart-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-percent {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.chart-circle-bg {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 10;
+}
+
+.chart-circle {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 10;
+    stroke-dasharray: 0 100;
+    transition: stroke-dasharray 1s ease-in-out;
+}
