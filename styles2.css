@@ -8,7 +8,16 @@
     --link-text: #9A7456;
     --body-font: 'Le Havre', sans-serif;
 }
-
+@font-face {
+	font-family: 'Lawyer Gothic';
+	src: url('LawyerGothic-Bold.eot');
+	src: local('Lawyer Gothic Bold'), local('LawyerGothic-Bold'),
+		url('LawyerGothic-Bold.eot?#iefix') format('embedded-opentype'),
+		url('LawyerGothic-Bold.woff') format('woff'),
+		url('LawyerGothic-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 /* Common Font Styles */
 @font-face {
     font-family: 'Le Havre';
@@ -19,7 +28,9 @@
         url('LeHavre.ttf') format('truetype'),
         url('LeHavre.eot?#iefix') format('embedded-opentype');
 }
-
+#my-skills{
+    text-align: center;
+}
 /* Container Styles */
 .container {
     max-width: 100%;
@@ -34,7 +45,7 @@
 
 .container p {
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /* Style for the paragraphs with color */
@@ -49,18 +60,81 @@
 }
 .container, header {
     z-index: 1;
+    
 }
 
 .sidebar {
     z-index: 0;
 }
+/* Style the container */
+/* Style the container */
+.title {
+    text-align: center; /* Center-align the content horizontally */
+   padding: 1px; /* Add padding as needed */
+    /* background-color: #f0f0f0;  */
+}
+#page-title{
+    font-size: 28px;
+    text-align: center;
+}
+/* Style the header */
+.title header {
+    margin-bottom: 1px; /* Add space between the title and the image */
+}
+
+/* Style the image */
+.title img {
+    max-width: 100px; /* Set a maximum width for the image */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Make the image a block element to center-align it horizontally */
+    margin: 0 auto; /* Center-align the image horizontally */
+    border-radius: 50%;
+    
+}
+
+/* Style the image container */
+.image-container {
+    position: relative; /* Create a positioning context for absolute positioning */
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+/* Style the image */
+.image-container img {
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Make the image a block element to center-align it horizontally */
+    margin: 0 auto; /* Center-align the image horizontally */
+    transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+
+/* Apply zoom effect when hovering over the image */
+.image-container:hover img {
+    transform: scale(1.1); /* Zoom in the image by increasing its scale */
+}
+@media (max-width: 768px) {
+    /* Adjust padding and font size for smaller screens */
+    .title {
+        padding: 10px;
+    }
+
+    .title header {
+        font-size: 20px;
+    }
+
+    /* Reset the zoom effect on mobile devices */
+    .image-container:hover img {
+        transform: scale(1);
+    }
+}
+
 /* Center-align the Header */
 header {
     text-align: center;
     background-color: var(--seconday-bg);
     color: var(--primary-bg);
-    padding: 20px;
-    margin-left: 150px;
+    padding: 5px;
+    margin-left: 10px;
+    font-family: 'Lawyer Gothic';
 }
 @media (max-width: 768px) {
     header {
@@ -69,14 +143,17 @@ header {
         width: 100%;
     }
 }
-img {
+.tools-horizontal-list img {
     outline: none;
+    /* height: 70%;
+    width: 40%; */
 }
 .title{
     margin-bottom: 5px;
 }
 .sidnav{
     margin-right: 10px;
+    font-family: 'Lawyer Gothic';
 }
 /* Media Queries for Responsive Layout */
 @media (max-width: 768px) {
@@ -120,7 +197,7 @@ img {
     left: 0;
     height: 100%;
     padding: 20px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 /* Sidebar Links Styles */
@@ -143,7 +220,7 @@ img {
 .sidebar a:hover {
     background-color: #555;
     color: var(--seconday-bg);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* Highlight the active link */
@@ -201,3 +278,43 @@ svg {
     stroke-dasharray: 0 100;
     transition: stroke-dasharray 1s ease-in-out;
 }
+
+/* Style the container */
+.container {
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding to the container */
+}
+
+/* Style the heading */
+.container h1 {
+    font-size: 24px; /* Set the heading font size */
+    font-family: 'Lawyer Gothic' ;
+}
+
+/* Style the horizontal lists */
+.tools-horizontal-list {
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center-align the items horizontally */
+    align-items: center; /* Center-align the items vertically */
+    margin: 10px 0; /* Add margin to separate the lists */
+}
+
+/* Style the images */
+.tools-horizontal-list img {
+    max-width: 100px; /* Limit the maximum width of images */
+    margin: 0 50px; /* Add margin between images */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .tools-horizontal-list {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+    
+    /* Reset margin for images on mobile */
+    .tools-horizontal-list img {
+        margin: 10px 0; /* Add margin between images */
+    }
+}
+
